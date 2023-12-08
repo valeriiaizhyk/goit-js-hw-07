@@ -1,0 +1,19 @@
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.gallery-item {
+  width: calc((100% - 24px) / 3);
+  box-sizing: border-box;
+}
+
+.gallery-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
