@@ -24,20 +24,51 @@ function createBoxes() {
   destroyBoxes();
 
   let size = 30;
+  const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxesContainer.appendChild(box);
+    fragment.appendChild(box);
 
     size += 10;
   }
 
+  boxesContainer.appendChild(fragment);
   input.value = "";
 }
 
 function destroyBoxes() {
   boxesContainer.innerHTML = "";
 }
+
+// function createBoxes() {
+//   const amount = Number(input.value);
+
+//   if (amount < 1 || amount > 100) {
+//     alert("Please enter a number between 1 and 100.");
+//     return;
+//   }
+
+//   destroyBoxes();
+
+//   let size = 30;
+
+//   for (let i = 0; i < amount; i++) {
+//     const box = document.createElement("div");
+//     box.style.width = `${size}px`;
+//     box.style.height = `${size}px`;
+//     box.style.backgroundColor = getRandomHexColor();
+//     boxesContainer.appendChild(box);
+
+//     size += 10;
+//   }
+
+//   input.value = "";
+// }
+
+// function destroyBoxes() {
+//   boxesContainer.innerHTML = "";
+// }
